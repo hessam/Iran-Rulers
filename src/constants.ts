@@ -60,7 +60,7 @@ export const REGIONS = ['caucasus','transoxiana','anatolia','azerbaijan','tabari
 export const CITIES: City[] = [
   { id:'tiflis',    name:{en:'Tbilisi', fa:'تفلیس'}, x:150, y:65 },
   { id:'baku',      name:{en:'Baku', fa:'باکو'}, x:320,  y:85 },
-  { id:'samarkand', name:{en:'Samarkand', fa:'سمرقند'}, x:550, y:60 },
+  { id:'samarkand', name:{en:'Samarkand', fa:'سمرقند'}, x:530, y:85 },
   { id:'bukhara',   name:{en:'Bukhara', fa:'بخارا'}, x:480, y:75 },
   { id:'konya',     name:{en:'Konya', fa:'قونیه'}, x:50, y:160 },
   { id:'tabriz',    name:{en:'Tabriz', fa:'تبریز'}, x:220, y:155 },
@@ -74,7 +74,7 @@ export const CITIES: City[] = [
   { id:'hamadan',   name:{en:'Hamadan', fa:'همدان'}, x:205, y:285 },
   { id:'ray',       name:{en:'Ray', fa:'ری'}, x:275, y:255 },
   { id:'susa',      name:{en:'Susa', fa:'شوش'}, x:210, y:375 },
-  { id:'shiraz',    name:{en:'Shiraz', fa:'شیراز'}, x:390, y:395 },
+  { id:'shiraz',    name:{en:'Shiraz', fa:'شیراز'}, x:380, y:415 },
   { id:'balkh',     name:{en:'Balkh', fa:'بلخ'}, x:675, y:380 },
-  { id:'zaranj',    name:{en:'Zaranj', fa:'زرنج'}, x:555, y:395 },
+  { id:'zaranj',    name:{en:'Zaranj', fa:'زرنج'}, x:570, y:415 },
 ];
