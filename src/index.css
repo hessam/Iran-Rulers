@@ -158,6 +158,7 @@ nav.era-nav button.active { border-color:var(--gold); color:var(--gold-lt); back
   background: var(--gold);
   font-weight: bold;
   box-shadow: 0 0 15px rgba(212, 175, 55, 0.35);
+}
 .floating-timeline .snap-arrow {
   display: flex;
   background: transparent;
