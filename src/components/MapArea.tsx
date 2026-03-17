@@ -161,18 +161,20 @@ export const MapArea: React.FC<MapAreaProps> = ({ snap, lang, onRegionClick, onR
         </g>
 
         {/* REGION LABELS */}
-        <text className="region-label" x="185" y="58" textAnchor="middle">{t(REGION_NAMES.caucasus)}</text>
-        <text className="region-label" x="565" y="58" textAnchor="middle">{t(REGION_NAMES.transoxiana)}</text>
-        <text className="region-label" x="70" y="168" textAnchor="middle">{t(REGION_NAMES.anatolia)}</text>
-        <text className="region-label" x="255" y="168" textAnchor="middle">{t(REGION_NAMES.azerbaijan)}</text>
-        <text className="region-label" x="465" y="168" textAnchor="middle">{t(REGION_NAMES.tabaristan)}</text>
-        <text className="region-label" x="615" y="196" textAnchor="middle">{t(REGION_NAMES.khorasan)}</text>
-        <text className="region-label" x="70" y="334" textAnchor="middle">{t(REGION_NAMES.mesopotamia)}</text>
-        <text className="region-label" x="255" y="278" textAnchor="middle">{t(REGION_NAMES.media)}</text>
-        <text className="region-label" x="220" y="390" textAnchor="middle">{t(REGION_NAMES.elam)}</text>
-        <text className="region-label" x="405" y="390" textAnchor="middle">{t(REGION_NAMES.fars)}</text>
-        <text className="region-label" x="555" y="390" textAnchor="middle">{t(REGION_NAMES.sistan)}</text>
-        <text className="region-label" x="680" y="390" textAnchor="middle">{t(REGION_NAMES.bactria)}</text>
+        <g style={{ direction: lang === 'fa' ? 'rtl' : 'ltr', letterSpacing: lang === 'fa' ? 'normal' : '0.05em' }} lang={lang}>
+          <text className="region-label" x="185" y="58" textAnchor="middle">{t(REGION_NAMES.caucasus)}</text>
+          <text className="region-label" x="565" y="58" textAnchor="middle">{t(REGION_NAMES.transoxiana)}</text>
+          <text className="region-label" x="70" y="168" textAnchor="middle">{t(REGION_NAMES.anatolia)}</text>
+          <text className="region-label" x="255" y="168" textAnchor="middle">{t(REGION_NAMES.azerbaijan)}</text>
+          <text className="region-label" x="465" y="168" textAnchor="middle">{t(REGION_NAMES.tabaristan)}</text>
+          <text className="region-label" x="615" y="196" textAnchor="middle">{t(REGION_NAMES.khorasan)}</text>
+          <text className="region-label" x="70" y="334" textAnchor="middle">{t(REGION_NAMES.mesopotamia)}</text>
+          <text className="region-label" x="255" y="278" textAnchor="middle">{t(REGION_NAMES.media)}</text>
+          <text className="region-label" x="220" y="390" textAnchor="middle">{t(REGION_NAMES.elam)}</text>
+          <text className="region-label" x="405" y="390" textAnchor="middle">{t(REGION_NAMES.fars)}</text>
+          <text className="region-label" x="555" y="390" textAnchor="middle">{t(REGION_NAMES.sistan)}</text>
+          <text className="region-label" x="680" y="390" textAnchor="middle">{t(REGION_NAMES.bactria)}</text>
+        </g>
 
         {/* Decorative city dots */}
         <g opacity="0.45">
