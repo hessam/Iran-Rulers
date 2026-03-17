@@ -42,23 +42,35 @@ export const Tooltip: React.FC<TooltipProps> = ({ hoveredRegion, mousePos, snap,
         opacity: isVisible ? 1 : 0
       }}
     >
-      <h3 id="tt-region">{t(REGION_NAMES[hoveredRegion])}</h3>
-      <div className="tt-row" id="tt-ruler">
-        {pw.map((p, i) => (
-          <React.Fragment key={i}>
-            <span style={{ color: (C as any)[p.culture] || C.empty, fontWeight: 600 }}>{t(p.name)}</span>
-            <br />
-          </React.Fragment>
-        ))}
+      <div style={{ 
+        fontSize: '9px', 
+        color: 'var(--parchment-dim)', 
+        textTransform: 'uppercase', 
+        letterSpacing: '0.1em', 
+        marginBottom: '6px', 
+        borderBottom: '1px solid var(--border-dim)', 
+        paddingBottom: '4px' 
+      }}>
+        {t(REGION_NAMES[hoveredRegion])}
       </div>
-      <div className="tt-row" id="tt-status">
-        {pw.map((p, i) => (
-          <React.Fragment key={i}>
-            <span>{t(p.capital)}</span> · <span>{statusLabel(p.status)}</span>
+      
+      {pw.map((p, i) => (
+        <div key={i} style={{ marginBottom: i < pw.length - 1 ? '8px' : 0 }}>
+          <h3 style={{ 
+            color: (C as any)[p.culture] || 'var(--gold)', 
+            margin: '0 0 4px 0', 
+            fontSize: '14px',
+            lineHeight: 1.2
+          }}>
+            {t(p.name)}
+          </h3>
+          <div className="tt-row">
+            <span style={{ color: 'var(--parchment)' }}>{p.dates}</span>
             <br />
-          </React.Fragment>
-        ))}
-      </div>
+            {t(p.capital)} · {statusLabel(p.status)}
+          </div>
+        </div>
+      ))}
     </div>
   );
 };
