@@ -1,4 +1,4 @@
-import { Culture, LocalizedString } from './types';
+import { Culture, LocalizedString, City } from './types';
 
 export const C = {
   persian:      '#7B2D8B',  // Derafsh Kaviani purple
@@ -56,3 +56,25 @@ export const CULTURE_NAMES: Record<string, Culture> = {
 
 export const REGIONS = ['caucasus','transoxiana','anatolia','azerbaijan','tabaristan',
                  'khorasan','mesopotamia','media','elam','fars','sistan','bactria'];
+
+export const CITIES: City[] = [
+  { id:'tiflis',    name:{en:'Tbilisi', fa:'تفلیس'}, x:150, y:65 },
+  { id:'baku',      name:{en:'Baku', fa:'باکو'}, x:320,  y:85 },
+  { id:'samarkand', name:{en:'Samarkand', fa:'سمرقند'}, x:550, y:60 },
+  { id:'bukhara',   name:{en:'Bukhara', fa:'بخارا'}, x:480, y:75 },
+  { id:'konya',     name:{en:'Konya', fa:'قونیه'}, x:50, y:160 },
+  { id:'tabriz',    name:{en:'Tabriz', fa:'تبریز'}, x:220, y:155 },
+  { id:'amol',      name:{en:'Amol', fa:'آمل'}, x:420, y:185 },
+  { id:'sari',      name:{en:'Sari', fa:'ساری'}, x:475, y:192 },
+  { id:'nishapur',  name:{en:'Nishapur', fa:'نشابور'}, x:560, y:205 },
+  { id:'merv',      name:{en:'Merv', fa:'مرو'}, x:640, y:155 },
+  { id:'herat',     name:{en:'Herat', fa:'هرات'}, x:620, y:245 },
+  { id:'babylon',   name:{en:'Babylon', fa:'بابل'}, x:75, y:350 },
+  { id:'baghdad',   name:{en:'Baghdad', fa:'بغداد'}, x:85, y:305 },
+  { id:'hamadan',   name:{en:'Hamadan', fa:'همدان'}, x:205, y:285 },
+  { id:'ray',       name:{en:'Ray', fa:'ری'}, x:275, y:255 },
+  { id:'susa',      name:{en:'Susa', fa:'شوش'}, x:210, y:375 },
+  { id:'shiraz',    name:{en:'Shiraz', fa:'شیراز'}, x:390, y:395 },
+  { id:'balkh',     name:{en:'Balkh', fa:'بلخ'}, x:675, y:380 },
+  { id:'zaranj',    name:{en:'Zaranj', fa:'زرنج'}, x:555, y:395 },
+];

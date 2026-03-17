@@ -212,6 +212,10 @@ body.lang-fa .region-label { font-size: 9px; letter-spacing: normal; direction: 
 .ornament-tl { top:6px; left:6px; } .ornament-tr { top:6px; right:6px; }
 .ornament-bl { bottom:6px; left:6px; } .ornament-br { bottom:6px; right:6px; }
 
+.city-dot { fill: var(--gold-dim); opacity: 0.7; }
+.city-label { font-family:'Cinzel',serif; font-size:6px; fill:var(--parchment-dim); opacity:0.6; pointer-events:none; user-select:none; }
+.city-label.lang-fa { font-family: var(--fa-font) !important; font-size:7.5px; opacity:0.75; }
+
 /* ── SIDE PANEL (desktop) ── */
 .side-panel { width:230px; flex-shrink:0; display:flex; flex-direction:column; background:var(--bg-panel); border-left:1px solid var(--border-dim); overflow:hidden; padding-bottom: 20px; }
 .side-panel-head { padding:9px 13px; border-bottom:1px solid var(--border-dim); font-family:'Cinzel',serif; font-size:10px; color:var(--gold-dim); letter-spacing:0.1em; text-transform:uppercase; flex-shrink:0; }

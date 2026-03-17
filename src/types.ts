@@ -35,3 +35,10 @@ export interface Culture {
   fa: string;
   color: string;
 }
+
+export interface City {
+  id: string;
+  name: LocalizedString;
+  x: number;
+  y: number;
+}

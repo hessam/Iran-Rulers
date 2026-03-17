@@ -1,6 +1,6 @@
 import React, { useMemo } from 'react';
 import { Snapshot, Language, Power } from '../types';
-import { REGIONS, REGION_NAMES, C } from '../constants';
+import { REGIONS, REGION_NAMES, C, CITIES } from '../constants';
 
 interface MapAreaProps {
   snap: Snapshot;
@@ -176,20 +176,21 @@ export const MapArea: React.FC<MapAreaProps> = ({ snap, lang, onRegionClick, onR
           <text className="region-label" x="680" y="390" textAnchor="middle">{t(REGION_NAMES.bactria)}</text>
         </g>
 
-        {/* Decorative city dots */}
-        <g opacity="0.45">
-          <circle cx="170" cy="70" r="1.8" fill="var(--gold-dim)"/>
-          <circle cx="530" cy="70" r="1.8" fill="var(--gold-dim)"/>
-          <circle cx="72" cy="155" r="1.8" fill="var(--gold-dim)"/>
-          <circle cx="275" cy="155" r="1.8" fill="var(--gold-dim)"/>
-          <circle cx="465" cy="148" r="1.8" fill="var(--gold-dim)"/>
-          <circle cx="650" cy="152" r="1.8" fill="var(--gold-dim)"/>
-          <circle cx="72" cy="328" r="1.8" fill="var(--gold-dim)"/>
-          <circle cx="255" cy="268" r="1.8" fill="var(--gold-dim)"/>
-          <circle cx="210" cy="382" r="1.8" fill="var(--gold-dim)"/>
-          <circle cx="400" cy="382" r="1.8" fill="var(--gold-dim)"/>
-          <circle cx="552" cy="382" r="1.8" fill="var(--gold-dim)"/>
-          <circle cx="672" cy="382" r="1.8" fill="var(--gold-dim)"/>
+        {/* CITIES */}
+        <g id="map-cities">
+          {CITIES.map(city => (
+            <g key={city.id}>
+              <circle className="city-dot" cx={city.x} cy={city.y} r="1.5"/>
+              <text 
+                className={`city-label ${lang === 'fa' ? 'lang-fa' : ''}`} 
+                x={city.x} 
+                y={city.y - 4} 
+                textAnchor="middle"
+              >
+                {t(city.name)}
+              </text>
+            </g>
+          ))}
         </g>
         {/* Compass rose */}
         <g transform="translate(730,22)" opacity="0.28">
